@@ -1,0 +1,22 @@
+{
+  "name": "diceroll",
+  "version": "1.0.0",
+  "description": "React application to simulate various dice rolls",
+  "main": "./client/src/index.js",
+  "scripts": {
+    "start": "cd ./client && npm run start",
+    "test": "n/a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackpres/diceRoll.git"
+  },
+  "author": "hackpres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hackpres/diceRoll/issues"
+  },
+  "homepage": "https://github.com/hackpres/diceRoll#readme",
+  "dependencies": {
+  }
+}
