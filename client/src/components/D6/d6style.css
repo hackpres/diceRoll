@@ -1,0 +1,90 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.d6-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform: rotateY(185deg) rotateX(150deg) rotateZ(315deg);
+}
+.side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    background-color: #1fe5c7;
+}
+/* /////////////////////    Initial position of sides to create cube!   ///////////////////// */
+.one {
+    transform: translateZ(100px);
+}
+.two {
+    transform: translateX(-100px) rotateY(-90deg);
+}
+.three {
+    transform: translateY(100px) rotateX(90deg);
+}
+.four {
+    transform: translateY(-100px) rotateX(90deg);
+}
+.five {
+    transform: translateX(100px) rotateY(90deg);
+}
+.six {
+    transform: translateZ(-100px);
+}
+/* /////////////////////    Set up the dots for each side!  ///////////////////// */
+.side:before {
+    content: '';
+    width: 20%;
+    height: 20%;
+    background: black;
+    border-radius: 50%;
+}
+.two:before {
+    background: transparent;
+    box-shadow: 
+        #000 -50px -50px 0px 0px, 
+        #000 50px 50px 0px 0px;
+}
+.three:before {
+    box-shadow: 
+        #000 -50px -50px 0px 0px, 
+        #000 50px 50px 0px 0px;
+}
+.four:before {
+    background: transparent;
+    box-shadow: 
+        #000 -50px -50px 0px 0px, 
+        #000 -50px 50px 0px 0px, 
+        #000 50px -50px 0px 0px, 
+        #000 50px 50px 0px 0px;
+}
+.five:before {
+    box-shadow: 
+        #000 -50px -50px 0px 0px, 
+        #000 -50px 50px 0px 0px, 
+        #000 50px -50px 0px 0px, 
+        #000 50px 50px 0px 0px;
+}
+.six:before {
+    background: transparent;
+    box-shadow: 
+    #000 -50px -50px 0px 0px, 
+    #000 -50px 0px 0px 0px,
+    #000 -50px 50px 0px 0px, 
+    #000 50px -50px 0px 0px, 
+    #000 50px 0px 0px 0px,
+    #000 50px 50px 0px 0px;
+}
